@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(246, 246, 246);
+        }
+
+        header {
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .blog1,
+        .blog2,
+        .blog3,
+        .popular {
+            width: 100%;
+            background-color: white;
+            box-shadow: 3px 3px 5px gainsboro;
+        }
+
+        .blog1 img,
+        .blog2 img,
+        .blog3 img {
+            width: 100%;
+        }
+
+        .blog3 {
+            margin-top: 30px;
+        }
+
+        .img {
+            height: 50px;
+            width: 50px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            main {
+                display: flex;
+                gap: 30px;
+            }
+
+            .blog3 {
+                margin-top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <p>
+            Welcome to the blog of
+            <span style="background-color: black; color: white; padding: 3px 5px;">Unknown</span>
+        </p>
+    </header>
+    <main>
+        <div>
+            <div class="blog1">
+                <img src="https://www.w3schools.com/w3images/woods.jpg" alt="">
+                <div style="padding: 16px;">
+                    <h2 style="margin-top: 10px;">TITLE HEADING</h2>
+                    <p style="margin-top: 16px;">Title description, April 7, 2014</p>
+                    <p style="margin-top: 22px;">
+                        Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem
+                        euismod
+                        placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi
+                        non
+                        congue
+                        ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus
+                        vitae,
+                        ultricies congue gravida diam non fringilla.
+                    </p>
+                    <button
+                        style="background-color: white; padding: 10px; font-size: 18px; margin-top: 16px; border: 1px solid gray;">Read
+                        More</button>
+                </div>
+            </div>
+
+            <div class="blog2" style="margin-top: 30px;">
+                <img src="https://www.w3schools.com/w3images/bridge.jpg" alt="">
+                <div style="padding: 16px;">
+                    <h2 style="margin-top: 10px;">BLOG ENTRY</h2>
+                    <p style="margin-top: 16px;">Title description, April 7, 2014</p>
+                    <p style="margin-top: 22px;">
+                        Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem
+                        euismod
+                        placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi
+                        non
+                        congue
+                        ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus
+                        vitae,
+                        ultricies congue gravida diam non fringilla.
+                    </p>
+                    <button
+                        style="background-color: white; padding: 10px; font-size: 18px; margin-top: 16px; border: 1px solid gray;">Read
+                        More</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="blog3">
+                <img src="https://www.w3schools.com/w3images/avatar_g.jpg" alt="">
+                <div style="padding: 16px;">
+                    <h3 style="margin-top: 10px; font-size: 20px;">My Name</h3>
+                    <p style="margin-top: 20px;">
+                        Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a
+                        interest
+                        of lorem ipsum and mauris neque quam blog. I want to share my world with you.
+                    </p>
+                </div>
+            </div>
+
+            <div class="popular" style="margin-top: 30px; ">
+                <div style="font-size: 24px; background-color: rgb(225, 225, 225); padding: 24px 16px;">Popular Post
+                </div>
+                <div
+                    style="display: flex; border-bottom: 1px solid gainsboro; font-size: 18px; padding: 24px 16px; gap: 16px; align-items: center;">
+                    <img class="img" src="https://www.w3schools.com/w3images/workshop.jpg" alt="">
+                    <div>
+                        <p>Lorem</p>
+                        <p style="margin-top: 5px;">Sed mattis nunc</p>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; border-bottom: 1px solid gainsboro; font-size: 18px; padding: 24px 16px; gap: 16px; align-items: center;">
+                    <img class="img" src="https://www.w3schools.com/w3images/skies.jpg" alt="">
+                    <div>
+                        <p>Lorem</p>
+                        <p style="margin-top: 5px;">Sed mattis nunc</p>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; border-bottom: 1px solid gainsboro; font-size: 18px; padding: 24px 16px; gap: 16px; align-items: center;">
+                    <img class="img" src="https://www.w3schools.com/w3images/gondol.jpg" alt="">
+                    <div>
+                        <p>Lorem</p>
+                        <p style="margin-top: 5px;">Sed mattis nunc</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: rgb(92, 92, 92); padding: 20px; margin-top: 20px;">
+        <p style="color: white; text-align: center;">&copy; 2024 by Unknown, All rights reserved</p>
+    </footer>
+</body>
+
+</html>

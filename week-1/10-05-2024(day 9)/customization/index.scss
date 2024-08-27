@@ -1,0 +1,33 @@
+$primary: #5caeff;
+$secondary: #c3d4dd;
+$success: #2eea86;
+$danger: #ff746a;
+$info: #79eaf9;
+$warning: #fffa6a;
+$light: #ebebeb;
+$dark: #2a2a2a;
+
+$body-font-family: 'Roboto', sans-serif;
+$headings-font-family: 'Roboto', sans-serif;
+
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/_variables.scss";
+
+
+.custom-element {
+    color: $gray-500;
+    background-color: $dark;
+}
+
+$custom-theme-colors: (
+    "yellowish-white": #E8EDD5,
+    "rose": #ff6060,
+    "light-gray": $gray-300,
+    "cyan-100": $cyan-100
+);
+
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+// $theme-colors: map-remove($theme-colors, "dark");
+@import "./node_modules/bootstrap/scss/bootstrap.scss";

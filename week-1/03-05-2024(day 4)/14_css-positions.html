@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section {
+            background-color: cadetblue;
+            height: 400px;
+            width: 550px;
+            margin-top: 20px;
+        }
+
+        .child {
+            background-color: gainsboro;
+            height: 150px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body style="height: 5000px;">
+    <section class="section">
+        <p class="child" style="position: relative; top: 50px; left: 50px;">relative</p>
+    </section>
+
+    <section class="section" style="position: relative">
+        <p class="child" style="position: absolute;  bottom: 0; right: 0;">absolute</p>
+    </section>
+    <section class="section"
+        style="position: fixed; top: 100px; right: 0; display: flex; justify-content: center; align-items: center;">
+        <p class="child">fixed</p>
+    </section>
+    <section class="section"
+        style="position: sticky; top: 200px;  display: flex; justify-content: center; align-items: center;">
+        <p class="child">sticky</p>
+    </section>
+
+
+</body>
+
+</html>

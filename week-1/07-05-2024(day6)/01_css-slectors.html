@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* element selector */
+        h3 {
+            background-color: cadetblue;
+        }
+
+        /* id selector */
+        #para1 {
+            background-color: gainsboro;
+        }
+
+        /* class selector */
+        .para2 {
+            background-color: cornflowerblue;
+        }
+
+        /* group selector */
+        h3,
+        #para1,
+        .para2,
+        p {
+            padding: 5px 0;
+            margin: 5px 0;
+        }
+
+        /* decendant selector */
+        .section1 p {
+            color: blue;
+            background-color: darksalmon;
+        }
+
+        /* child selector */
+        .section2>p {
+            background-color: rebeccapurple;
+        }
+
+        /* adjacent sibling selector */
+        .section3 div+p {
+            background-color: darkturquoise;
+        }
+
+        /* general sibling selector */
+        .section4 div~p {
+            background-color: yellow;
+        }
+
+        h2 {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Selectors</h1>
+
+    <h2>element selector</h2>
+    <h3>Heading</h3>
+
+    <h2>id selector</h2>
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tempore maxime cupiditate veniam
+        voluptatem
+        dolorum velit, dicta consequuntur, odit deleniti quasi vitae cum deserunt assumenda nam odio eos sapiente
+        minima?</p>
+
+    <h2>class selector</h2>
+    <p class="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id voluptatem amet aut earum, commodi
+        ipsam sed
+        molestiae unde ad est perferendis praesentium, illum obcaecati magnam ratione at ea. Illo, ea?</p>
+
+    <hr style="margin: 50px 0;">
+
+    <h1>Combinator Selectors</h1>
+
+    <h2>decendant selector</h2>
+    <section class="section1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, debitis.</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, quidem.</p>
+        </div>
+    </section>
+
+    <h2>child selector</h2>
+    <section class="section2">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, possimus?</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, tempore!</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, eius!</p>
+    </section>
+
+    <h2>adjacent sibling selector</h2>
+    <section class="section3">
+        <div>
+            <p>p1</p>
+        </div>
+        <p>p2</p>
+        <p>p3</p>
+        <div>
+            <p>p4</p>
+        </div>
+        <p>p5</p>
+        <p>p6</p>
+    </section>
+
+    <h2>general sibling selector</h2>
+    <section class="section4">
+        <div>
+            <p>p1</p>
+        </div>
+        <p>p2</p>
+        <p>p3</p>
+        <div>
+            <p>p4</p>
+        </div>
+        <p>p5</p>
+        <p>p6</p>
+    </section>
+
+    <hr style="margin: 50px 0;">
+
+
+</body>
+
+</html>

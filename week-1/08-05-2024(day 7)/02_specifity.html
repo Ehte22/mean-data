@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: blue;
+        }
+
+        .example {
+            color: red;
+        }
+
+        #unique {
+            color: green;
+        }
+
+        p#unique {
+            color: rgb(25, 77, 139) !important;
+        }
+
+        div p#unique {
+            color: cadetblue;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="unique" class="example">This paragraph has conflicting styles.</p>
+
+        <p style="color: coral;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, eius?</p>
+    </div>
+
+</body>
+
+</html>

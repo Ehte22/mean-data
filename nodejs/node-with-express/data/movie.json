@@ -1,0 +1,147 @@
+[
+    {
+        "name": "Riddick",
+        "description": "lorem ipsum dolor sit amet.",
+        "duration": 119,
+        "rating": 4.2,
+        "totlaRating": 329,
+        "releaseYear": 2014,
+        "releaseData": "2014-04-07",
+        "geners": [
+            "Action",
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "directors": [
+            "David Twohy"
+        ],
+        "coverImage": "Reddick-2014.jpg",
+        "actors": [
+            "Vin Diesel",
+            "Karl Urable",
+            "Katee Sackhoff"
+        ],
+        "price": 200
+    },
+    {
+        "name": "movie 2",
+        "description": "lorem ipsum dolor sit amet.",
+        "duration": 117,
+        "rating": 4.4,
+        "totlaRating": 377,
+        "releaseYear": 2013,
+        "releaseData": "2013-04-07",
+        "geners": [
+            "Action",
+            "Sci-Fi",
+            "Thriller",
+            "Drama"
+        ],
+        "directors": [
+            "Jos Marting"
+        ],
+        "coverImage": "movie2-2013.jpg",
+        "actors": [
+            "Vin Diesel",
+            "Karl Urable",
+            "Katee Sackhoff"
+        ],
+        "price": 230
+    },
+    {
+        "name": "movie 3",
+        "description": "lorem ipsum dolor sit amet.",
+        "duration": 113,
+        "rating": 4,
+        "totlaRating": 329,
+        "releaseYear": 2013,
+        "releaseData": "2013-04-07",
+        "geners": [
+            "Action",
+            "Thriller",
+            "Drama"
+        ],
+        "directors": [
+            "David Watson"
+        ],
+        "coverImage": "movie3-2013.jpg",
+        "actors": [
+            "Vin Diesel",
+            "Karl Urable",
+            "Katee Sackhoff"
+        ],
+        "price": 190
+    },
+    {
+        "name": "movie 4",
+        "description": "lorem ipsum dolor sit amet.",
+        "duration": 122,
+        "rating": 3.8,
+        "totlaRating": 298,
+        "releaseYear": 2012,
+        "releaseData": "2012-05-07",
+        "geners": [
+            "Action",
+            "Thriller"
+        ],
+        "directors": [
+            "Watson Lorem"
+        ],
+        "coverImage": "movie4-2013.jpg",
+        "actors": [
+            "Vin Diesel",
+            "Karl Urable",
+            "Katee Sackhoff"
+        ],
+        "price": 210
+    },
+    {
+        "name": "movie 5",
+        "description": "lorem ipsum dolor sit amet.",
+        "duration": 108,
+        "rating": 4.5,
+        "totlaRating": 420,
+        "releaseYear": 2014,
+        "releaseData": "2014-04-07",
+        "geners": [
+            "Action",
+            "Thriller",
+            "Drama"
+        ],
+        "directors": [
+            "John Doe"
+        ],
+        "coverImage": "movie3-2014.jpg",
+        "actors": [
+            "Vin Diesel",
+            "Karl Urable",
+            "Katee Sackhoff"
+        ],
+        "price": 250
+    },
+    {
+        "name": "movie 6",
+        "description": "lorem ipsum dolor sit amet.",
+        "duration": 105,
+        "rating": 3.7,
+        "totlaRating": 310,
+        "releaseYear": 2013,
+        "releaseData": "2013-09-17",
+        "geners": [
+            "Action",
+            "Thriller",
+            "Drama",
+            "Horror"
+        ],
+        "directors": [
+            "Kate Ross"
+        ],
+        "coverImage": "movie3-2013.jpg",
+        "actors": [
+            "Vin Diesel",
+            "Karl Urable",
+            "Katee Sackhoff"
+        ],
+        "price": 170
+    }
+]

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* unvisited link */
+        .link {
+            color: blue;
+        }
+
+        /* visited link */
+        .link:visited {
+            color: red;
+        }
+
+        /* mouse hover lin */
+        .link:hover {
+            color: cadetblue;
+        }
+
+        /* selected link */
+        .link:active {
+            color: yellow;
+        }
+
+        /* Pseudo Element */
+
+        .para::first-letter {
+            color: cadetblue;
+            font-size: 30px;
+        }
+
+        .para::first-line {
+            color: red;
+        }
+
+        .para::before {
+            content: "Start ";
+        }
+
+        .para::after {
+            content: " ✔️";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo Class Selector</h1>
+    <p><a href="" class="link">click me</a></p>
+
+    <h1>Pseudo Element Selector</h1>
+
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quam dolorem cupiditate itaque, tempora
+        molestias
+        totam quo rerum similique, enim fugit culpa officiis officia iusto velit eligendi, ipsa atque voluptas?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugiat exercitationem suscipit repellendus.
+        Necessitatibus maxime cupiditate vero animi non accusamus, porro illo aut ad, earum rem, assumenda in. Facere,
+        possimus.</p>
+</body>
+
+</html>

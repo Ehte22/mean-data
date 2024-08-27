@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* decendent selector */
+        #div1 p {
+            background-color: gainsboro;
+        }
+
+        /* child selector */
+        #div2>p {
+            background-color: lightcoral;
+        }
+
+        /* adjacent sibling selector */
+        div+p {
+            background-color: coral;
+        }
+
+        /* general sibling selector */
+        #div4~p {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- decendent selector -->
+    <h1>Decendent Selector</h1>
+    <div id="div1">
+        <p>para 1</p>
+        <p>para 2</p>
+        <section>
+            <p>para 3</p>
+        </section>
+        <p>para 4</p>
+    </div>
+
+    <!-- child selector -->
+    <h1>Child Selector</h1>
+    <div id="div2">
+        <p>para 1</p>
+        <p>para 2</p>
+        <section>
+            <p>para 3</p>
+        </section>
+        <p>para 4</p>
+    </div>
+
+    <!-- adjacent sibling selector -->
+    <h1>Adjacent Sibling Selector</h1>
+    <div>
+        <div>
+            <p>para 1</p>
+            <p>para 2</p>
+        </div>
+        <p>para 3</p>
+        <p>para 4</p>
+        <div>
+            <p>para 5</p>
+            <p>para 6</p>
+        </div>
+        <p>para 7</p>
+    </div>
+
+    <!-- General Sibling Selector -->
+    <h1>General Sibling Selector</h1>
+    <div>
+        <div id="div4">div</div>
+        <p>para 1</p>
+        <code>some code</code>
+        <p>para 2</p>
+        <p>para 3</p>
+    </div>
+</body>
+
+</html>

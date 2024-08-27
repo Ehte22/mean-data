@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+        A semantic element clearly describes its meaning to both the browser and the developer.
+
+        Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+
+        Examples of semantic elements: <header>, <main>, and <footer> - Clearly defines its content.
+     -->
+
+    <!-- The <header> element represents a container for introductory content or a set of navigational links. -->
+    <header
+        style="height: 10vh; display: flex; align-items: center; justify-content: center; color: white; background-color: red;">
+        Header
+    </header>
+
+    <!-- Them <main> element defines main content -->
+    <main style="height: 80vh; display: flex; width: 100vw;">
+        <section style="width: 70%; height: 100%;">
+            <article
+                style="background-color: darkgray; height: 50%; color: white; display: flex; justify-content: center; align-items: center;">
+                article 1
+            </article>
+            <article
+                style="background-color: darkseagreen; height: 50%; color: white; display: flex; justify-content: center; align-items: center;">
+                article 2
+            </article>
+        </section>
+
+        <!-- The <aside> element defines some content aside from the content it is placed in (like a sidebar). -->
+        <aside
+            style="height: 100%; background-color: cadetblue; width: 30%; color: white; display: flex; justify-content: center; align-items: center;">
+            aside
+        </aside>
+    </main>
+
+
+    <!-- The <footer> element defines a footer for a document or section. -->
+    <footer
+        style="background-color: black; color: white; height: 10vh; display: flex; justify-content: center; align-items: center;">
+        Footer
+    </footer>
+</body>
+
+</html>

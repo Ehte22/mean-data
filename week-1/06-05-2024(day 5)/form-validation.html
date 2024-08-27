@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        input {
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>HTML5 Form Validation</legend>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required
+                    oninvalid="this.setCustomValidity('Plase Enter Your Name')">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" min="18" max="30" name="age" id="age" required>
+            </div>
+            <div>
+                <label for="url">URL:</label>
+                <input type="url" name="url" id="url" required oninvalid="this.setCustomValidity('Please Enter URl')">
+            </div>
+            <div>
+                <label for="data">Date:</label>
+                <input type="date" min="2024-05-05" max="2024-05-15" name="date" id="date" required
+                    oninvalid="this.setCustomValidity('Please Enter Date')">
+            </div>
+            <input type="submit" required>
+        </fieldset>
+    </form>
+</body>
+
+</html>

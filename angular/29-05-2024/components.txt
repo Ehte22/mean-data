@@ -1,0 +1,61 @@
+Components
+
+• Creating Components
+Creating a component in Angular is straightforward using the Angular CLI. Open your terminal, navigate to your Angular project's root directory, and run the command ng generate component component-name or its shorthand ng g c component-name. This command creates a new directory named component-name within the src/app directory, containing four files: component-name.component.ts (the TypeScript file for the component logic), component-name.component.html (the HTML template), component-name.component.css (the CSS styles), and component-name.component.spec.ts (the unit test file). Additionally, the new component is automatically declared in the AppModule (app.module.ts).
+
+Once the component is created, you can use it in your application by adding its selector, which is defined in the component-name.component.ts file, to any template in your application. For example, if the selector is app-component-name, you can use <app-component-name></app-component-name> in your HTML. This setup allows you to modularize your Angular application by encapsulating functionality and styles within reusable components, promoting a clean and maintainable codebase.
+
+---------------------------------------------------------------------------------------
+
+• Component Metadata
+Component metadata in Angular is specified using the @Component decorator, which is a crucial part of defining an Angular component. This decorator provides the framework with information about how the component should be instantiated, configured, and used. The @Component decorator takes an object that includes several properties to configure the component's selector, template, styles, and other behaviors. Key properties include selector, which defines the HTML tag for the component, templateUrl or template for the component's HTML, and styleUrls or styles for the component's CSS. These properties allow Angular to know what HTML and CSS to apply when the component is used in a template.
+---------------------------------------------------------------------------------------
+
+• Templates and Styles
+
+In Angular, templates and styles are essential parts of defining how components are rendered and styled within an application. These are specified within the @Component decorator metadata of each component.
+
+Templates
+The template defines the HTML structure that represents the view of the component. It can be specified in two ways:
+
+templateUrl: This property is used to provide the path to an external HTML file that contains the template code. This file is loaded by Angular at runtime.
+template: Alternatively, you can define the template inline using a string. This is useful for small templates.
+Templates can contain HTML markup, Angular directives (like *ngFor, *ngIf, etc.), component selectors, and binding syntax ({{}} for interpolation, [ ] for property binding, ( ) for event binding, [( )] for two-way binding).
+
+Styles
+Styles define the appearance of the component's view. They can be specified in two ways:
+
+styleUrls: This property is used to provide an array of paths to external CSS files that contain the component's styles.
+styles: Alternatively, you can define the component's styles inline using an array of strings. This is useful for small styles.
+Styles can include CSS, SCSS, or any other CSS preprocessor syntax supported by Angular. The styles defined here are scoped to the component, which means they won't affect other parts of the application.
+
+---------------------------------------------------------------------------------------
+• Data Binding (Interpolation, Property Binding, Event Binding)
+
+Data Binding
+Data binding in Angular is a way to connect the data in your component with what is displayed in your HTML. It lets you easily pass data from your component to your view and vice versa. For example, you can use interpolation ({{property}}) to show a component's property in your HTML, property binding ([property]="expression") to set an element's attribute, and event binding ((event)="handler()") to call a component's method when an event occurs (like a button click).
+
+Two-Way Data Binding
+Two-way data binding in Angular is a feature that allows you to keep a component's property and an HTML input field in sync. This means that when the user changes the value in the input field, the component's property is automatically updated, and when the component's property changes, the input field is updated too. This is done using the [(ngModel)] directive, making it easy to manage form inputs and other interactive elements.
+
+Interpolation
+Interpolation in Angular is a form of data binding that allows you to embed dynamic content in your HTML templates. It uses double curly braces {{ }} to bind the component's data properties to the template, rendering the property values as text. This is useful for displaying variable content within the HTML. For example, if a component has a property called title, you can display it in the template using {{ title }}, and Angular will replace this placeholder with the actual value of the title property.
+
+Property Binding
+Property binding in Angular is a way to set the properties of HTML elements or directives dynamically. It uses square brackets [ ] to bind a component's property to an element's property. This means you can bind data from the component to the view in a dynamic and reactive manner. For example, [src]="imageUrl" binds the imageUrl property from the component to the src attribute of an <img> tag. When the value of imageUrl changes, the src attribute of the image will update automatically.
+
+Event Binding
+Event binding in Angular is used to handle events generated by user actions such as clicks, key presses, and mouse movements. It uses parentheses ( ) to bind an event from the view to a method in the component. For instance, (click)="onClick()" binds the click event of a button to the onClick method in the component. When the button is clicked, the onClick method is executed. This allows developers to define custom logic in response to user interactions within the component.
+
+---------------------------------------------------------------------------------------
+
+• Component Interaction (Input and Output)
+
+Component interaction in Angular refers to the ways in which components communicate with each other. This is typically achieved through the use of @Input and @Output decorators. @Input allows a parent component to pass data to a child component, while @Output enables a child component to emit events to a parent component using an EventEmitter. This pattern helps in building a structured and maintainable application by ensuring that data flows in a predictable manner between different parts of the application, facilitating modular and reusable component design.
+
+@Input
+@Input in Angular is used to pass data from a parent component to a child component. It allows the parent component to set properties on the child component, which can then use this data in its template or logic. For example, if you have a parent component that wants to display a user's name in a child component, you would use @Input to pass the name from the parent to the child. This way, the child component can use the passed data to display it or perform other operations.
+
+@Output
+@Output in Angular is used to send data or events from a child component to a parent component. It uses an EventEmitter to emit an event that the parent component can listen for and respond to. For instance, if a child component has a button that needs to notify the parent component when it is clicked, you would use @Output to emit a custom event when the button is clicked. The parent component can then handle this event and execute some logic, such as updating other parts of the application. This allows for communication from the child component back to the parent component.
+

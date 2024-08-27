@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="count">0</div>
+    <button onclick="counter()">+1</button>
+    <script>
+        function add() {
+            let counte = 0
+            return function () { counte += 1; return counte }
+        }
+        function counter() {
+            document.getElementById("#count").innerHTML = add()
+        }       
+    </script>
+
+    <script src="06_closure.js"></script>
+</body>
+
+</html>

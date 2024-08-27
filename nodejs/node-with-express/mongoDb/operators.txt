@@ -1,0 +1,149 @@
+MongoDB Comparison Operators
+
+*Query Operators
+
+1. Equality Operators
+
+$eq: Matches values that are equal to a specified value.
+db.users.find({ age: { $eq: 25 } })
+
+$ne: Matches values that are not equal to a specified value.
+db.users.find({ age: { $ne: 25 } })
+
+===============================================================================
+
+2. Comparison Operators
+
+$gt: Matches values that are greater than a specified value.
+db.users.find({ age: { $gt: 25 } })
+
+$lt: Matches values that are less than a specified value.
+db.users.find({ age: { $lt: 25 } })
+
+$gte: Matches values that are greater than or equal to a specified value.
+db.users.find({ age: { $gte: 25 } })
+
+$lte: Matches values that are less than or equal to a specified value.
+db.users.find({ age: { $lte: 25 } })
+
+===============================================================================
+
+3. Array Operators
+
+$in: Matches values that are in an array of specified values.
+db.users.find({ interests: { $in: ["reading", "hiking"] } })
+This query finds all documents in the users collection where the interests field contains either "reading" or "hiking".
+
+$nin: Matches values that are not in an array of specified values
+db.users.find({ interests: { $nin: ["reading", "hiking"] } })
+This query finds all documents in the users collection where the interests field does not contain either "reading" or "hiking
+
+$all: The $all operator selects documents where the value of a field is an array that contains all elements in an array.
+db.users.find({ interests: { $all: ["reading", "hiking", "swimming"] } })
+This query finds all documents in the users collection where the interests field contains all three elements: "reading", "hiking", and "swimming".
+
+$size: The $size operator selects documents where the value of a field is an array with a specified size.
+db.users.find({ interests: { $size: 3 } })
+This query finds all documents in the users collection where the interests field is an array with exactly 3 elements.
+
+$elemMatch: The $elemMatch operator selects documents where the value of a field is an array that contains at least one element that matches a specified condition.
+db.users.find({ scores: { $elemMatch: { $gt: 80 } } })
+This query finds all documents in the users collection where the scores field is an array that contains at least one element greater than 80.
+===============================================================================
+
+4. Logical Operators
+
+$and: Matches values that satisfy all specified conditions.
+db.users.find({ $and: [{ age: { $gt: 25 } }, { interests: "reading" }] })
+
+$or: Matches values that satisfy at least one specified condition.
+db.users.find({ $or: [{ age: { $gt: 25 } }, { interests: "hiking" }] })
+
+$nor: Matches values that do not satisfy any specified conditions.
+db.users.find({ $nor: [{ age: { $gt: 25 } }, { interests: "reading" }] })
+This query finds all documents in the users collection where the age field is not greater than 25 and the interests field does not contain "reading".
+
+$not: Matches values that do not satisfy a specified condition.
+db.users.find({ age: { $not: { $gt: 25 } } })
+This query finds all documents in the users collection where the age field is not greater than 25.
+
+===============================================================================
+
+5. Existence Operators / Element Operators
+
+$exists: Matches documents that have a specified field.
+db.users.find({ address: { $exists: true } })
+This query finds all documents in the users collection that have an address field.
+
+$type: Matches documents that have a specified field with a specific data type.
+db.users.find({ age: { $type: "int" } })
+This query finds all documents in the users collection where the age field is an integer.
+
+===============================================================================
+
+*Update Operators
+
+6. Field Update Operators
+
+$set: operator sets the value of a field to a specified value.
+db.users.updateOne({ _id: ObjectId("...") }, { $set: { name: "John Doe" } })
+This query updates the document with the specified _id in the users collection, setting the name field to "John Doe".
+
+$unset: operator removes a field from a document.
+db.users.updateOne({ _id: ObjectId("...") }, { $unset: { email: "" } })
+This query updates the document with the specified _id in the users collection, removing the email field.
+
+$inc: operator increments the value of a field by a specified amount.
+db.products.updateOne({ _id: ObjectId("...") }, { $inc: { quantity: 5 } })
+This query updates the document with the specified _id in the products collection, incrementing the quantity field by 5.
+
+$mul: operator multiplies the value of a field by a specified factor.
+db.products.updateOne({ _id: ObjectId("...") }, { $mul: { price: 1.1 } })
+This query updates the document with the specified _id in the products collection, multiplying the price field by 1.1 (i.e., increasing it by 10%).
+
+===============================================================================
+
+7. Array Update Operators
+
+$push: operator adds a value to an array field.
+db.users.updateOne({ _id: ObjectId("...") }, { $push: { hobbies: "swimming" } })
+This query updates the document with the specified _id in the users collection, adding the value "swimming" to the hobbies array.
+
+$pull: operator removes all instances of a value from an array field.
+db.users.updateOne({ _id: ObjectId("...") }, { $pull: { hobbies: "swimming" } })
+This query updates the document with the specified _id in the users collection, removing all instances of "swimming" from the hobbies array.
+
+$addToSet: operator adds a value to an array field only if it does not already exist in the array.
+db.users.updateOne({ _id: ObjectId("...") }, { $addToSet: { hobbies: "swimming" } })
+This query updates the document with the specified _id in the users collection, adding the value "swimming" to the hobbies array only if it does not already exist in the array.
+
+$pop: operator removes the first or last element from an array field.
+db.users.updateOne({ _id: ObjectId("...") }, { $pop: { hobbies: 1 } })
+This query updates the document with the specified _id in the users collection, removing the last element from the hobbies array.
+
+===============================================================================
+
+8. Update with Aggregation Pipeline
+
+$mergeObjects: operator merges two objects into a single object.
+db.users.updateOne(
+  { _id: ObjectId("...") },
+  {
+    $set: {
+      address: { $mergeObjects: [{ street: "123 Main St" }, { city: "Anytown" }] }
+    }
+  }
+)
+This query updates the document with the specified _id in the users collection, merging the two objects into a single address object: { street: "123 Main St", city: "Anytown" }.
+
+$addFields operator adds new fields to a document.
+db.users.updateOne(
+  { _id: ObjectId("...") },
+  {
+    $addFields: {
+      fullName: { $concat: ["$firstName", " ", "$lastName"] },
+      age: { $subtract: ["$dob", new Date("1990-01-01")] }
+    }
+  }
+)
+This query updates the document with the specified _id in the users collection, adding two new fields: fullName (concatenating firstName and lastName) and age (calculating the age based on the dob field).

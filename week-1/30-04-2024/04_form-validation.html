@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <!-- 
+        required: Specifies whether a form field needs to be filled in before the form can be submitted.
+
+        minlength and maxlength: Specifies the minimum and maximum length of textual data (strings).
+
+        min and max: Specifies the minimum and maximum values of numerical input types.
+
+        type: Specifies whether the data needs to be a number, an email address, or some other specific preset type.
+     -->
+    <form action="">
+        <fieldset>
+            <label for="name">Enter Your Name</label>
+            <input type="text" required minlength="6" maxlength="12" id="name" name="name">
+            <br><br>
+            <label for="mobile">Enter Your Phone Number</label>
+            <input type="number" required id="mobile" name="mobile">
+            <br><br>
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+
+</html>

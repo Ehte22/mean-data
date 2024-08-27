@@ -1,0 +1,14 @@
+<h4>Todo component</h4>
+<input class="form-control" type="text" [(ngModel)]="name" placeholder="Please Enter Your Name">
+<p *ngIf="show; else noUser ">{{name}}</p>
+<ng-template #noUser>
+    <p>No User Found</p>
+</ng-template>
+
+<div class="mt-2">
+    <button class="btn btn-primary" (click)="handleShow()" [disabled]="name === ''">Show</button>
+    <button class="btn btn-danger ms-2" (click)="name ='' " [disabled]="name === '' ">Reset</button>
+</div>
+
+<hr>
+<app-todo-child [data]=data [users]=users (updateUserFn)="updateUser($event)"></app-todo-child>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        HTML links are hyperlinks.
+
+        You can click on a link and jump to another document.
+
+        When you move the mouse over a link, the mouse arrow will turn into a little hand.
+     -->
+
+    <!-- The HTML <a> tag defines a hyperlink. -->
+
+    <p> <a href="https://www.google.com/" title="go to google">google</a></p>
+
+    <!-- HTML Links - The target Attribute
+    By default, the linked page will be displayed in the current browser window. To change this, you must specify
+    another target for the link.
+
+    The target attribute specifies where to open the linked document.
+
+    The target attribute can have one of the following values:
+
+    _self - Default. Opens the document in the same window/tab as it was clicked
+    _blank - Opens the document in a new window or tab
+    _parent - Opens the document in the parent frame
+    _top - Opens the document in the full body of the window -->
+
+    <p> <a href="https://unsplash.com/" target="_blank">unsplash images</a> </p>
+
+    <hr>
+
+    <!-- A local link (a link to a page within the same website) is specified with a relative URL -->
+
+    <a href="/public/headphone.jpeg">headphone image</a>
+
+    <hr>
+
+    <!-- Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email): -->
+
+    <a href="mailto:xyz@gmail.com">send email</a>
+
+    <hr>
+
+    <button onclick="document.location='/public/headphone.jpeg'">headphone image</button>
+
+    <!-- Use the <a> element to define a link
+        Use the href attribute to define the link address
+        Use the target attribute to define where to open the linked document
+        Use the <img> element (inside <a>) to use an image as a link
+        Use the mailto: scheme inside the href attribute to create a link that opensthe user's email program -->
+
+</body>
+
+</html>

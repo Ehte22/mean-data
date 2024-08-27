@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style-none {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="parent">
+            <img id="camera"
+                src="https://images.unsplash.com/photo-1715440184646-0da47d6d88f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="200px" alt="camera">
+        </div>
+        <div id="sunset">
+            <img src="https://images.unsplash.com/photo-1715744005019-57c97a5d29e9?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="200px" alt="sunset">
+        </div>
+        <div id="resto">
+            <img src="https://images.unsplash.com/photo-1715428019327-fa9363fba1ef?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="200px" alt="restaurant">
+        </div>
+        <div id="city">
+            <img src="https://images.unsplash.com/photo-1715077856124-4405d115911d?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="200px" alt="city">
+        </div>
+        <div id="google">
+            <a href="https://www.google.com/">Google</a>
+        </div>
+    </div>
+    <script>
+        // event capturing
+        // document.getElementById("parent").addEventListener("click", () => {
+        //     console.log("parent div clicked");
+        // }, true)
+        // document.getElementById("camera").addEventListener("click", e => {
+        //     console.log("camera image clicked");
+        //     e.stopPropagation()
+        // }, true)
+
+        // event bubbling
+        document.getElementById("parent").addEventListener("click", () => {
+            console.log("parent div clicked");
+        })
+        document.getElementById("camera").addEventListener("click", e => {
+            console.log("camera image clicked");
+            // e.stopPropagation()
+        })
+
+        // preventDefault event
+        document.getElementById("google").addEventListener("click", e => {
+            console.log("Google clicked");
+            e.preventDefault()
+        })
+
+        // target event
+        document.getElementById("parent").addEventListener("click", e => {
+            console.log(e.target.parentNode);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        })
+    </script>
+</body>
+
+</html>

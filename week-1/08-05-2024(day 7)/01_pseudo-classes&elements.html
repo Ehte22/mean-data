@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        section div {
+            margin-top: 10px;
+        }
+
+        .class1 {
+            background-color: tomato;
+            color: white;
+            border: none;
+            padding: 5px;
+        }
+
+        /* :hover */
+        .class1:hover {
+            background-color: aqua;
+            color: black;
+        }
+
+        .class2 {
+            background-color: cadetblue;
+            border: none;
+            padding: 5px;
+        }
+
+        /* :focus */
+        .class2:focus {
+            background-color: cornflowerblue;
+            color: white;
+        }
+
+        /* :visited */
+        .class4:visited {
+            color: coral;
+        }
+
+        /* :active */
+        .class5:active {
+            color: brown;
+        }
+
+        /* :first-child */
+        p:first-child {
+            color: blue;
+        }
+
+        /* pseudo elements */
+        /* ::first-line */
+        .element1::first-line {
+            color: red;
+        }
+
+        /* ::first-letter */
+        .element2::first-letter {
+            color: blue;
+            font-size: 25px;
+        }
+
+        .element3::before {
+            content: "Hello World ";
+            color: red;
+        }
+
+        .element4::after {
+            content: " End of the Para";
+            color: blue;
+        }
+
+        .element5::marker {
+            color: aqua;
+        }
+
+        .element6::selection {
+            background-color: cadetblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section1">
+        <h1>Pseudo Classes</h1>
+
+        <div>
+            <h2>:hover</h2>
+            <button class="class1">Hover me</button>
+        </div>
+
+        <div>
+            <h2>:focus</h2>
+            <button class="class2">Click me to get focus</button>
+        </div>
+
+        <div>
+            <h2>:visited :active</h2>
+            <a class="class4" style="margin-left: 20px;" href="" class="class3">Link 1</a>
+            <a class="class5" href="" style="margin-left: 30px;">Link 2</a>
+        </div>
+
+        <div>
+            <h2>:first-child</h2>
+            <div>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>Pseudo Elements</h1>
+        <div>
+            <h2>::first-line</h2>
+            <article class="element1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit eos corporis id
+                repudiandae quo adipisci quisquam voluptatem quas esse nulla quia, deserunt at ex totam culpa. Aut ut
+                molestias, amet, dolor aliquam sunt iure fuga officiis, facere eius et debitis. Odit natus temporibus
+                quos aperiam magnam dolor nam itaque magni nulla quidem? Animi minus, dolorem molestiae placeat beatae
+                nulla unde quo quam temporibus facilis exercitationem error explicabo at excepturi consectetur quis
+                porro illo, voluptatem labore praesentium et inventore delectus reiciendis aliquam. Quae iste accusamus
+                ut ipsam sequi ab? Fugiat expedita ratione consectetur eum, non tempore quod qui reprehenderit error
+                dolore, voluptatibus officia porro, delectus beatae reiciendis vel! Fugit quaerat, magni illo modi harum
+                explicabo libero labore aut cumque dignissimos, provident nobis non placeat temporibus adipisci saepe a,
+                sit error quia expedita voluptates optio distinctio. Earum error nostrum temporibus eum cum voluptatem
+                molestiae, sint, libero excepturi nesciunt, itaque sequi totam aspernatur numquam? Rerum inventore saepe
+                aut eligendi cum nesciunt exercitationem asperiores laudantium dolores, recusandae eius laborum minus
+                nemo aliquid qui iste culpa cumque quis blanditiis earum voluptatum? Id deserunt odio expedita et
+                officia illum voluptatem eaque praesentium eveniet libero dolorem harum odit, quas totam ad ab laborum
+                fugiat reprehenderit veritatis maxime!</article>
+        </div>
+
+        <div>
+            <h2>::first-letter</h2>
+            <p class="element2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis laboriosam vitae
+                facilis numquam
+                asperiores aliquam neque adipisci provident, ipsa ut.</p>
+        </div>
+
+        <div>
+            <h2>::before</h2>
+            <p class="element3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, nam.</p>
+        </div>
+        <div>
+            <h2>::after</h2>
+            <p class="element4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, nam.</p>
+        </div>
+        <div>
+            <h2>::marker</h2>
+            <ul class="element5">
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>::selection</h2>
+            <p class="element6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, nam.</p>
+        </div>
+    </section>
+</body>
+
+</html>

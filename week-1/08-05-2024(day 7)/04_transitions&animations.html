@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* transitions */
+        .section2 {
+            background-color: gainsboro;
+        }
+
+        .div1,
+        .div2,
+        .div3,
+        .div4,
+        .div5,
+        .div6 {
+            width: 70px;
+            height: 70px;
+            background-color: cadetblue;
+            margin-top: 10px;
+            transition: 3s;
+            transition-delay: 1s;
+        }
+
+        .div1 {
+            transition-timing-function: linear;
+        }
+
+        .div2 {
+            transition-timing-function: ease;
+        }
+
+        .div3 {
+            transition-timing-function: ease-in;
+        }
+
+        .div4 {
+            transition-timing-function: ease-out;
+        }
+
+        .div5 {
+            transition-timing-function: ease-in-out;
+        }
+
+        .section2:hover .div1,
+        .section2:hover .div2,
+        .section2:hover .div3,
+        .section2:hover .div4,
+        .section2:hover .div5 {
+            width: 500px;
+        }
+
+        .section2:hover .div6 {
+            width: 120px;
+            height: 120px;
+            transform: rotate(180deg);
+        }
+
+        /* animations */
+
+        .anim1 {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            animation-name: practice;
+            animation-duration: 3s;
+        }
+
+        @keyframes practice {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: blue;
+            }
+        }
+
+        .anim2 {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            animation-name: second;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes second {
+            0% {
+                background-color: blue;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: red;
+            }
+
+            75% {
+                background-color: green;
+            }
+
+            100% {
+                background-color: blues;
+            }
+        }
+
+        .anim3 {
+            background-color: yellow;
+            position: relative;
+            height: 100px;
+            width: 100px;
+            animation-name: third;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            /* animation-direction: reverse; */
+        }
+
+        @keyframes third {
+            0% {
+                background-color: yellow;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: red;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: green;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: blue;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: yellow;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .anim4 {
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            animation-name: fourth;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fourth {
+            from {
+                top: 0px;
+            }
+
+            to {
+                top: 200px;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main style="display: flex; width: 100vw; gap: 20px;">
+        <section style="width: 50%;">
+            <h1>CSS transitions</h1>
+            <section class="section1"></section>
+            <section class="section2">
+                <div class="div1">linear</div>
+                <div class="div2">ease</div>
+                <div class="div3">ease in</div>
+                <div class="div4">ease out</div>
+                <div class="div5">ease in out</div>
+                <div class="div6">transform</div>
+            </section>
+        </section>
+
+        <section style="width: 50%;">
+            <h1>CSS Animations</h1>
+            <div style="display: flex; gap: 20px;">
+                <div class="anim1"></div>
+                <div class="anim2"></div>
+                <div class="anim3"></div>
+                <div class="anim4"></div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

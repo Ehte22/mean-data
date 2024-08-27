@@ -1,0 +1,50 @@
+.text-coral {
+    color: coral;
+}
+
+.bg-coral {
+    background-color: coral;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+.w-100vw {
+    width: 100vw;
+}
+
+.letter-spacing {
+    letter-spacing: 4px;
+}
+
+.fw-700 {
+    font-weight: 700
+}
+
+.p-60 {
+    padding: 60px 0px;
+}
+
+.w-265p {
+    width: 265px;
+}
+
+.h-200p {
+    height: 200px;
+}
+
+.h-80p {
+    height: 80px;
+}
+
+@media (min-width: 768px) {
+    .ms-200 {
+        margin-left: 200px;
+    }
+}
+
+.img:hover {
+    scale: 1.1;
+    transition: 0.3s ease;
+}

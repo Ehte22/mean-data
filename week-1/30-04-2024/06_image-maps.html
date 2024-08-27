@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Images in HTML</h1>
+
+    <!--
+        The HTML <img> tag is used to embed an image in a web page.
+    
+        src - Specifies the path to the image
+        alt - Specifies an alternate text for the image
+    -->
+
+    <img src="/public/bottel.avif" alt="bottle image" height="300" width="450">
+
+    <!-- we can also embed the image using its absolute url -->
+
+    <img src="https://images.unsplash.com/photo-1714244322811-f1387dc93909?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        height="300" width="450" alt="">
+
+    <h1>Image Maps</h1>
+
+    <!-- 
+        The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags.
+     -->
+
+    <!-- The image is inserted using the <img> tag. The only difference from other images is that you must add a usemap attribute: -->
+    <img src="/public/bottel.avif" alt="bottle image" height="300" width="450" usemap="#workmap">
+
+
+    <!-- 
+        we can define the shape of the clickable area, and we can choose one of these values:
+
+        rect - defines a rectangular region
+        circle - defines a circular region
+        poly - defines a polygonal region
+        default - defines the entire region
+     -->
+
+    <!-- we can also define some coordinates to be able to place the clickable area onto the image.  -->
+
+    <map name="workmap">
+        <area shape="rect" coords="110 40 205 275" href="details.html" alt="bottle image">
+    </map>
+
+
+
+
+</body>
+
+</html>

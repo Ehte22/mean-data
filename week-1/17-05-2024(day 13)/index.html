@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mul(x) {
+            return function (y) { // anonymous function
+                return function (z) { // anonymous function
+                    return x * y * z;
+                };
+            };
+        }
+        const result = mul()
+        const res = result()
+        console.log(res);
+    </script>
+</body>
+
+</html>

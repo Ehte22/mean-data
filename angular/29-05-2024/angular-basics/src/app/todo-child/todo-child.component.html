@@ -1,0 +1,13 @@
+<h5>Todo child component</h5>
+
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{moreThan25: (num1 + num2) > 25  }">The sum of {{num1}} and
+    {{num2}} is {{num1 + num2}}
+</p>
+<p class="text-secondary">The sum of {{num1}} and {{num2}} is {{sum()}}</p>
+
+<h6>{{data}}</h6>
+<ul>
+    <li *ngFor="let item of users">{{item}}</li>
+</ul>
+
+<button (click)="test()" class="btn btn-dark">update</button>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- The HTML <video> element is used to show a video on a web page. -->
+
+    <!-- The controls attribute adds video controls, like play, pause, and volume. -->
+
+    <video src="/public/mov_bbb.mp4" height="300" width="450" controls></video>
+
+    <hr>
+
+    <!-- we can also embed the video using its absolute url -->
+
+    <!-- 
+        To start a video automatically, use the autoplay attribute: 
+    
+        Add muted after autoplay to let your video start playing automatically (but muted):
+    -->
+
+
+    <video id="video" src="https://www.w3schools.com/html/movie.mp4" height="300" width="450" controls autoplay muted>
+    </video>
+
+    <br><br>
+
+    <button onclick="play()">play</button>
+    <button onclick="pause()">pause</button>
+    <button onclick="small()">small</button>
+    <button onclick="normal()">normal</button>
+    <button onclick="big()">big</button>
+
+    <hr>
+
+    <!-- we can also control video using javascript functions -->
+
+    <script>
+        const video = document.querySelector("#video")
+
+        const pause = () => {
+            if (video.play) {
+                video.pause()
+            }
+        }
+        const play = () => {
+            if (video.pause) {
+                video.play()
+            }
+        }
+
+        const small = () => {
+            video.width = 350
+            video.height = 230
+        }
+
+        const normal = () => {
+            video.width = 450
+            video.height = 300
+        }
+        const big = () => {
+            video.width = 600
+            video.height = 420
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

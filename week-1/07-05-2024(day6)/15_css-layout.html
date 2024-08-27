@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            margin: 50px;
+        }
+
+        /* float */
+        .box {
+            padding: 50px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: gainsboro;
+            float: left;
+            width: 33.33%;
+            margin-bottom: 20px;
+        }
+
+        /* flex */
+        .flex {
+            margin-top: 15px;
+            display: flex;
+            background-color: rgb(10, 10, 10);
+            height: 300px;
+            justify-content: space-between;
+            align-items: center;
+            /* flex-direction: column; */
+            gap: 20px;
+        }
+
+        .flex div {
+            padding: 10px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        /* grid */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: gainsboro;
+            margin-top: 15px;
+            gap: 20px;
+        }
+
+        @media (max-width:768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+        }
+
+        .grid div {
+            background-color: cadetblue;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <h1 style="margin-bottom: 15px;">Float</h1>
+        <div class="box-float">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+    </section>
+
+
+    <section>
+        <h1>Flex</h>
+            <div class="flex">
+                <div style="background-color: cornflowerblue;">div 1</div>
+                <div style="background-color: gainsboro;">div 2</div>
+                <div style="background-color: cadetblue;">div 3</div>
+            </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h1>Grid</h1>
+
+        <div class="grid">
+            <div>item1</div>
+            <div>item2</div>
+            <div>item3</div>
+            <div>item4</div>
+            <div>item5</div>
+            <div>item6</div>
+            <div>item7</div>
+        </div>
+    </section>
+</body>
+
+</html>

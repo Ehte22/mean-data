@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- action	Specifies where to send the form-data when a form is submitted -->
+
+    <!-- The target attribute specifies where to display the response that is received after submitting the form -->
+
+    <!-- The autocomplete attribute specifies whether a form should have autocomplete on or off. -->
+
+    <!-- 
+        The method attribute specifies the HTTP method to be used when submitting the form data.
+
+        The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+
+        The default HTTP method when submitting form data is GET.
+     -->
+
+    <form action="/04_form-validation.html" target="_blank" autocomplete="on" method="get">
+        <label for="name">Enter Your Name</label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="email">Enter Your Email</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <label for="password">Enter Your Password</label>
+        <input minlength="10" type="password" name="password" id="password">
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
